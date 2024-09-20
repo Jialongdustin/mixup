@@ -1,0 +1,80 @@
+train:
+  way: 5
+  shot: 5
+  num_session: 9
+  num_base: 60
+  num_novel: 40
+  num_all: 100
+  start_session: 0
+  test_times: 10
+  seq_sample: false
+  tmp_train: false
+  Method: debug
+  batch_size_base: 128
+  lamda_proto: !!float 0.0
+  stochastic: true
+  inc_mixup: null
+  pre_mixup_prob: 0.0
+  pre_mixup_alpha: 0.8
+  pre_cutmix_prob: 0.6
+  pre_cutmix_alpha: 1.0
+  pre_idty_prob: 0.4
+  pit_mixup_alpha: 0.8
+  isReplaceFC: true
+  pit: true
+  model_dir:
+    s0_model_dir: null # session 0's final model path
+    sf_model_dir: null # final session's model path
+  seed: 11
+  epochs:
+    epochs_pre: 10
+    epochs_base: 10
+    epochs_new: 100
+  lr:
+    lr_std: !!float 0.1
+    lr_base: !!float 0.01
+    lr_new: !!float 0.1
+    lr_cec_base: 0.0002
+    lr_sis_base: 0.0002
+    lrg: !!float 0.0002  #lr for graph attention
+  scheduler: 
+    schedule: Step # ['Step', 'Milestone']
+    milestones: [40, 80]
+    step: 40
+    gamma: !!float 0.5
+  optimizer:
+    decay: !!float 0.0005
+    momentum: !!float 0.9
+  network:
+    temperature: 16
+    base_mode: ft_cos  # ['ft_dot', 'ft_cos']
+    new_mode: avg_cos  # ['ft_dot', 'ft_cos', 'avg_cos'] ft_dot means using linear classifier, ft_cos means using cosine classifier, avg_cos means using average data embedding and cosine classifier
+  strategy:
+    data_init: true
+    data_init_new: false
+    set_no_val: false
+    seq_sample: false
+  episode:
+    train_episode: 50
+    episode_way: 20
+    base: 10
+    syn_new: 5
+    episode_shot: 5
+    episode_query: 15
+    low_way: 5
+    low_shot: 5
+  dataloader:
+    num_workers: 8
+    train_batch_size: 128
+    test_batch_size: 100
+  extractor:
+    sample_rate: 16000
+    window_size: 400
+    hop_size: 160
+    mel_bins: 128
+    fmin: 0
+    fmax: 8000
+    window: hann
+
+
+

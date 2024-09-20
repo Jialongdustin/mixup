@@ -1,0 +1,1677 @@
+manual seed: 28
+{'Method': 'debug',
+ 'batch_size_base': 128,
+ 'config': 'configs/pitsc/pitsc_FMC_stochastic_classifier_t10.yaml',
+ 'dataloader': Namespace(num_workers=8, train_batch_size=128, test_batch_size=100),
+ 'dataroot': '/data/datasets/FSD-MIX-CLIPS-for_FSCIL/FSD-MIX-CLIPS_data',
+ 'dataset': 'FMC',
+ 'debug': False,
+ 'episode': Namespace(train_episode=50, episode_way=20, base=10, syn_new=5, episode_shot=5, episode_query=15, low_way=5, low_shot=5),
+ 'epochs': Namespace(epochs_pre=10, epochs_base=10, epochs_new=100),
+ 'extractor': Namespace(sample_rate=44100, window_size=2048, hop_size=1024, mel_bins=128, fmin=0, fmax=22050, window='hann'),
+ 'gpu': '2',
+ 'inc_mixup': None,
+ 'isReplaceFC': True,
+ 'lamda_proto': 0.0,
+ 'lr': Namespace(lr_std=0.01, lr_base=0.01, lr_new=0.1, lr_cec_base=0.0002, lr_sis_base=0.0002, lrg=0.0002),
+ 'model_dir': Namespace(s0_model_dir=None, sf_model_dir=None),
+ 'network': Namespace(temperature=16, base_mode='ft_cos', new_mode='avg_cos'),
+ 'num_all': 89,
+ 'num_base': 59,
+ 'num_novel': 30,
+ 'num_session': 7,
+ 'optimizer': Namespace(decay=0.0005, momentum=0.9),
+ 'pit': True,
+ 'pit_mixup_alpha': 0.6,
+ 'pre_cutmix_alpha': 1.0,
+ 'pre_cutmix_prob': 0.4,
+ 'pre_idty_prob': 0.6,
+ 'pre_mixup_alpha': 0.8,
+ 'pre_mixup_prob': 0.0,
+ 'project': 'pitsc',
+ 'scheduler': Namespace(schedule='Step', milestones=[40, 80], step=40, gamma=0.5),
+ 'seed': 28,
+ 'seq_sample': False,
+ 'shot': 5,
+ 'start_session': 0,
+ 'stochastic': True,
+ 'strategy': Namespace(data_init=True, data_init_new=True, set_no_val=False, seq_sample=False),
+ 'test_times': 10,
+ 'tmp_train': False,
+ 'way': 5}
+use gpu: [2]
+create folder: checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_10-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00
+random init params
+==> Classes for this standard train stage:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [02:50<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:21<?, ?it/s]
+{'all_acc': 0.36017, 'base_acc': 0.36017, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.36017, 'sess0_acc': 0.36017, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 0, standard test, loss=2.6404 acc=0.3602
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_10-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/std_train10_max_acc.pth
+best epoch 0, best val acc=36.017
+epoch:000,lr:0.0100,training_loss:3.90088,training_acc:0.53698,val_loss:2.64038,val_acc:0.36017
+This epoch takes 191 seconds 
+still need around 31.93 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:41<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.40042, 'base_acc': 0.40042, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.40042, 'sess0_acc': 0.40042, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 1, standard test, loss=2.4388 acc=0.4004
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_10-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/std_train10_max_acc.pth
+best epoch 1, best val acc=40.042
+epoch:001,lr:0.0100,training_loss:3.26525,training_acc:0.71970,val_loss:2.43881,val_acc:0.40042
+This epoch takes 53 seconds 
+still need around 7.97 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.43873, 'base_acc': 0.43873, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.43873, 'sess0_acc': 0.43873, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 2, standard test, loss=2.4017 acc=0.4387
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_10-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/std_train10_max_acc.pth
+best epoch 2, best val acc=43.873
+epoch:002,lr:0.0100,training_loss:3.07123,training_acc:0.75675,val_loss:2.40170,val_acc:0.43873
+This epoch takes 53 seconds 
+still need around 7.13 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.42822, 'base_acc': 0.42822, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.42822, 'sess0_acc': 0.42822, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 3, standard test, loss=2.4438 acc=0.4282
+best epoch 2, best val acc=43.873
+epoch:003,lr:0.0100,training_loss:2.93973,training_acc:0.79925,val_loss:2.44384,val_acc:0.42822
+This epoch takes 54 seconds 
+still need around 6.32 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.36017, 'base_acc': 0.36017, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.36017, 'sess0_acc': 0.36017, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 4, standard test, loss=2.7276 acc=0.3602
+best epoch 2, best val acc=43.873
+epoch:004,lr:0.0100,training_loss:3.06663,training_acc:0.81245,val_loss:2.72757,val_acc:0.36017
+This epoch takes 53 seconds 
+still need around 5.33 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.4272, 'base_acc': 0.4272, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.4272, 'sess0_acc': 0.4272, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 5, standard test, loss=2.4509 acc=0.4272
+best epoch 2, best val acc=43.873
+epoch:005,lr:0.0100,training_loss:3.07667,training_acc:0.82649,val_loss:2.45091,val_acc:0.42720
+This epoch takes 53 seconds 
+still need around 4.48 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.43305, 'base_acc': 0.43305, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.43305, 'sess0_acc': 0.43305, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 6, standard test, loss=2.5079 acc=0.4330
+best epoch 2, best val acc=43.873
+epoch:006,lr:0.0100,training_loss:3.05419,training_acc:0.85074,val_loss:2.50791,val_acc:0.43305
+This epoch takes 53 seconds 
+still need around 3.56 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.42364, 'base_acc': 0.42364, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.42364, 'sess0_acc': 0.42364, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 7, standard test, loss=2.5785 acc=0.4236
+best epoch 2, best val acc=43.873
+epoch:007,lr:0.0100,training_loss:2.86664,training_acc:0.84908,val_loss:2.57853,val_acc:0.42364
+This epoch takes 53 seconds 
+still need around 2.66 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.39059, 'base_acc': 0.39059, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.39059, 'sess0_acc': 0.39059, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 8, standard test, loss=2.7008 acc=0.3906
+best epoch 2, best val acc=43.873
+epoch:008,lr:0.0100,training_loss:2.74669,training_acc:0.86005,val_loss:2.70085,val_acc:0.39059
+This epoch takes 53 seconds 
+still need around 1.78 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.39636, 'base_acc': 0.39636, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.39636, 'sess0_acc': 0.39636, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 9, standard test, loss=2.7220 acc=0.3964
+best epoch 2, best val acc=43.873
+epoch:009,lr:0.0100,training_loss:2.94819,training_acc:0.86306,val_loss:2.72204,val_acc:0.39636
+This epoch takes 53 seconds 
+still need around 0.90 mins to finish
+Standard(not load) test loss=2.722, test acc=0.396
+Replace the fc with average embedding, and save it to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_10-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.44881, 'base_acc': 0.44881, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.44881, 'sess0_acc': 0.44881, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 0, standard test, loss=2.1924 acc=0.4488
+The NEW(after data init) best test acc of standard train stage=44.881
+new classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_10-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+best epoch 0, best test acc=46.212
+epoch:000,lr:0.0100,training_ce_loss:1.30446, training_reg_loss:0.00000,training_acc:0.66916,test_loss:2.12607,test_acc:0.46212
+This epoch takes 31 seconds 
+still need around 5.29 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 0, best test acc=46.212
+epoch:001,lr:0.0100,training_ce_loss:1.15480, training_reg_loss:0.00000,training_acc:0.71389,test_loss:2.15011,test_acc:0.45415
+This epoch takes 32 seconds 
+still need around 4.83 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 0, best test acc=46.212
+epoch:002,lr:0.0100,training_ce_loss:1.11651, training_reg_loss:0.00000,training_acc:0.72255,test_loss:2.13196,test_acc:0.45322
+This epoch takes 31 seconds 
+still need around 4.19 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 0, best test acc=46.212
+epoch:003,lr:0.0100,training_ce_loss:1.04986, training_reg_loss:0.00000,training_acc:0.74785,test_loss:2.16279,test_acc:0.44737
+This epoch takes 31 seconds 
+still need around 3.66 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 0, best test acc=46.212
+epoch:004,lr:0.0100,training_ce_loss:1.00570, training_reg_loss:0.00000,training_acc:0.75724,test_loss:2.14811,test_acc:0.44881
+This epoch takes 31 seconds 
+still need around 3.17 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 0, best test acc=46.212
+epoch:005,lr:0.0100,training_ce_loss:0.96849, training_reg_loss:0.00000,training_acc:0.77076,test_loss:2.12968,test_acc:0.45254
+This epoch takes 31 seconds 
+still need around 2.63 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 0, best test acc=46.212
+epoch:006,lr:0.0100,training_ce_loss:0.93022, training_reg_loss:0.00000,training_acc:0.78342,test_loss:2.11863,test_acc:0.46000
+This epoch takes 31 seconds 
+still need around 2.12 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 0, best test acc=46.212
+epoch:007,lr:0.0100,training_ce_loss:0.87223, training_reg_loss:0.00000,training_acc:0.80051,test_loss:2.14005,test_acc:0.45331
+This epoch takes 31 seconds 
+still need around 1.58 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 0, best test acc=46.212
+epoch:008,lr:0.0100,training_ce_loss:0.81793, training_reg_loss:0.00000,training_acc:0.81898,test_loss:2.17848,test_acc:0.44847
+This epoch takes 31 seconds 
+still need around 1.05 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/data/caowc/code/pitsc/train.py", line 58, in <module>
+    trainer.train()
+  File "/data/caowc/code/pitsc/models/pitsc/fscil_trainer.py", line 83, in train
+    tl, ta, treg = base_train_pit(self.model, trainloader, optimizer, scheduler, epoch, args)
+  File "/data/caowc/code/pitsc/models/pitsc/helper.py", line 15, in base_train_pit
+    for i, batch in enumerate(trainloader):
+  File "/data/caowc/anaconda3/envs/pytorch39/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/data/caowc/anaconda3/envs/pytorch39/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/data/caowc/anaconda3/envs/pytorch39/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1284, in _get_data
+    success, data = self._try_get_data()
+  File "/data/caowc/anaconda3/envs/pytorch39/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/data/caowc/anaconda3/envs/pytorch39/lib/python3.9/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/data/caowc/anaconda3/envs/pytorch39/lib/python3.9/threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+manual seed: 28
+{'Method': 'debug',
+ 'batch_size_base': 128,
+ 'config': 'configs/pitsc/pitsc_FMC_stochastic_classifier_t10.yaml',
+ 'dataloader': Namespace(num_workers=8, train_batch_size=128, test_batch_size=100),
+ 'dataroot': '/data/datasets/FSD-MIX-CLIPS-for_FSCIL/FSD-MIX-CLIPS_data',
+ 'dataset': 'FMC',
+ 'debug': False,
+ 'episode': Namespace(train_episode=50, episode_way=20, base=10, syn_new=5, episode_shot=5, episode_query=15, low_way=5, low_shot=5),
+ 'epochs': Namespace(epochs_pre=2, epochs_base=2, epochs_new=100),
+ 'extractor': Namespace(sample_rate=44100, window_size=2048, hop_size=1024, mel_bins=128, fmin=0, fmax=22050, window='hann'),
+ 'gpu': '2',
+ 'inc_mixup': None,
+ 'isReplaceFC': True,
+ 'lamda_proto': 0.0,
+ 'lr': Namespace(lr_std=0.01, lr_base=0.01, lr_new=0.1, lr_cec_base=0.0002, lr_sis_base=0.0002, lrg=0.0002),
+ 'model_dir': Namespace(s0_model_dir=None, sf_model_dir=None),
+ 'network': Namespace(temperature=16, base_mode='ft_cos', new_mode='avg_cos'),
+ 'num_all': 89,
+ 'num_base': 59,
+ 'num_novel': 30,
+ 'num_session': 7,
+ 'optimizer': Namespace(decay=0.0005, momentum=0.9),
+ 'pit': True,
+ 'pit_mixup_alpha': 0.6,
+ 'pre_cutmix_alpha': 1.0,
+ 'pre_cutmix_prob': 0.4,
+ 'pre_idty_prob': 0.6,
+ 'pre_mixup_alpha': 0.8,
+ 'pre_mixup_prob': 0.0,
+ 'project': 'pitsc',
+ 'scheduler': Namespace(schedule='Step', milestones=[40, 80], step=40, gamma=0.5),
+ 'seed': 28,
+ 'seq_sample': False,
+ 'shot': 5,
+ 'start_session': 0,
+ 'stochastic': True,
+ 'strategy': Namespace(data_init=True, data_init_new=True, set_no_val=False, seq_sample=False),
+ 'test_times': 1,
+ 'tmp_train': False,
+ 'way': 5}
+use gpu: [2]
+create folder: checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00
+random init params
+==> Classes for this standard train stage:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:44<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.36017, 'base_acc': 0.36017, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.36017, 'sess0_acc': 0.36017, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 0, standard test, loss=2.6404 acc=0.3602
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/std_train2_max_acc.pth
+best epoch 0, best val acc=36.017
+epoch:000,lr:0.0100,training_loss:3.90088,training_acc:0.53698,val_loss:2.64038,val_acc:0.36017
+This epoch takes 56 seconds 
+still need around 1.87 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.40042, 'base_acc': 0.40042, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.40042, 'sess0_acc': 0.40042, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 1, standard test, loss=2.4388 acc=0.4004
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/std_train2_max_acc.pth
+best epoch 1, best val acc=40.042
+epoch:001,lr:0.0100,training_loss:3.26525,training_acc:0.71970,val_loss:2.43881,val_acc:0.40042
+This epoch takes 53 seconds 
+still need around 0.90 mins to finish
+Standard(not load) test loss=2.439, test acc=0.400
+Replace the fc with average embedding, and save it to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.4272, 'base_acc': 0.4272, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.4272, 'sess0_acc': 0.4272, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 0, standard test, loss=2.2448 acc=0.4272
+The NEW(after data init) best test acc of standard train stage=42.720
+new classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+best epoch 0, best test acc=45.093
+epoch:000,lr:0.0100,training_ce_loss:1.51047, training_reg_loss:0.00000,training_acc:0.61804,test_loss:2.16177,test_acc:0.45093
+This epoch takes 31 seconds 
+still need around 1.05 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+best epoch 1, best test acc=45.229
+epoch:001,lr:0.0100,training_ce_loss:1.36437, training_reg_loss:0.00000,training_acc:0.67164,test_loss:2.15959,test_acc:0.45229
+This epoch takes 31 seconds 
+still need around 0.53 mins to finish this session
+Updating old class with class means 
+Replace the fc with average embedding, and save it to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+The new best test acc of base session=45.669
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.45669, 'base_acc': 0.45669, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.45669, 'sess0_acc': 0.45669, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 45.669
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 45.669
+protos, radius torch.Size([59, 512]) 2.364171360087779
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.43305, 'base_acc': 0.45008, 'novel_acc': 0.232, 'former_acc': 0.45008, 'cur_acc': 0.232, 'sess0_acc': 0.45008, 'sess1_acc': 0.232, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 43.305
+Novel classes cumulative accuracy: 23.200000000000003
+session: 0 test accuracy: 45.007999999999996
+session: 1 test accuracy: 23.200000000000003
+protos, radius torch.Size([64, 512]) 2.364171360087779
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.4071, 'base_acc': 0.44458, 'novel_acc': 0.186, 'former_acc': 0.42781, 'cur_acc': 0.142, 'sess0_acc': 0.44458, 'sess1_acc': 0.23, 'sess2_acc': 0.142, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.71
+Novel classes cumulative accuracy: 18.6
+session: 0 test accuracy: 44.458
+session: 1 test accuracy: 23.0
+session: 2 test accuracy: 14.2
+protos, radius torch.Size([69, 512]) 2.364171360087779
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39311, 'base_acc': 0.43788, 'novel_acc': 0.217, 'former_acc': 0.40043, 'cur_acc': 0.292, 'sess0_acc': 0.43788, 'sess1_acc': 0.219, 'sess2_acc': 0.14, 'sess3_acc': 0.292, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 39.311
+Novel classes cumulative accuracy: 21.7
+session: 0 test accuracy: 43.788
+session: 1 test accuracy: 21.9
+session: 2 test accuracy: 14.000000000000002
+session: 3 test accuracy: 29.2
+protos, radius torch.Size([74, 512]) 2.364171360087779
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.38747, 'base_acc': 0.43297, 'novel_acc': 0.25325, 'former_acc': 0.38885, 'cur_acc': 0.367, 'sess0_acc': 0.43297, 'sess1_acc': 0.218, 'sess2_acc': 0.137, 'sess3_acc': 0.291, 'sess4_acc': 0.367, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 38.747
+Novel classes cumulative accuracy: 25.324999999999996
+session: 0 test accuracy: 43.297000000000004
+session: 1 test accuracy: 21.8
+session: 2 test accuracy: 13.700000000000001
+session: 3 test accuracy: 29.099999999999998
+session: 4 test accuracy: 36.7
+protos, radius torch.Size([79, 512]) 2.364171360087779
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.37685, 'base_acc': 0.42703, 'novel_acc': 0.2584, 'former_acc': 0.38222, 'cur_acc': 0.292, 'sess0_acc': 0.42703, 'sess1_acc': 0.216, 'sess2_acc': 0.136, 'sess3_acc': 0.282, 'sess4_acc': 0.366, 'sess5_acc': 0.292, 'sess6_acc': None}
+Overall cumulative accuracy: 37.685
+Novel classes cumulative accuracy: 25.840000000000003
+session: 0 test accuracy: 42.703
+session: 1 test accuracy: 21.6
+session: 2 test accuracy: 13.600000000000001
+session: 3 test accuracy: 28.199999999999996
+session: 4 test accuracy: 36.6
+session: 5 test accuracy: 29.2
+protos, radius torch.Size([84, 512]) 2.364171360087779
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.36461, 'base_acc': 0.42424, 'novel_acc': 0.24733, 'former_acc': 0.37393, 'cur_acc': 0.208, 'sess0_acc': 0.42424, 'sess1_acc': 0.207, 'sess2_acc': 0.134, 'sess3_acc': 0.281, 'sess4_acc': 0.363, 'sess5_acc': 0.291, 'sess6_acc': 0.208}
+Overall cumulative accuracy: 36.461
+Novel classes cumulative accuracy: 24.733
+session: 0 test accuracy: 42.424
+session: 1 test accuracy: 20.7
+session: 2 test accuracy: 13.4
+session: 3 test accuracy: 28.1
+session: 4 test accuracy: 36.3
+session: 5 test accuracy: 29.099999999999998
+session: 6 test accuracy: 20.8
+protos, radius torch.Size([89, 512]) 2.364171360087779
+
+
+
+Final result:
+save output at  checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/output.xlsx
+
+reslut on FMC, method pitsc                    
+checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_2-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00                    
+****************************************Pretty Output********************************************                    
+         0        1        2        3        4        5        6
+0  0.45669  0.23200  0.14200  0.29200  0.36700  0.29200  0.20800
+1  0.45669  0.45008  0.44458  0.43788  0.43297  0.42703  0.42424
+2      NaN  0.23200  0.18600  0.21700  0.25325  0.25840  0.24733
+3  0.45669  0.43305  0.40710  0.39311  0.38747  0.37685  0.36461                    
+===> Comprehensive Performance Index(CPI) v2: 0.5806376181873919
+===> PD: 0.09208                    
+===> Memory Strock Ratio(MSR) Overall: 0.9289452363747838
+===> Amnesia Rate(AR): 0.07105476362521619                    
+===> Acc Average: 
+acc_cur_aver      0.255500
+acc_base_aver     0.439067
+acc_novel_aver    0.232330
+acc_both_aver     0.402697
+dtype: float64                    
+***********************************************************************************************
+manual seed: 28
+{'Method': 'debug',
+ 'batch_size_base': 128,
+ 'config': 'configs/pitsc/pitsc_FMC_stochastic_classifier_t10.yaml',
+ 'dataloader': Namespace(num_workers=8, train_batch_size=128, test_batch_size=100),
+ 'dataroot': '/data/datasets/FSD-MIX-CLIPS-for_FSCIL/FSD-MIX-CLIPS_data',
+ 'dataset': 'FMC',
+ 'debug': False,
+ 'episode': Namespace(train_episode=50, episode_way=20, base=10, syn_new=5, episode_shot=5, episode_query=15, low_way=5, low_shot=5),
+ 'epochs': Namespace(epochs_pre=20, epochs_base=20, epochs_new=100),
+ 'extractor': Namespace(sample_rate=44100, window_size=2048, hop_size=1024, mel_bins=128, fmin=0, fmax=22050, window='hann'),
+ 'gpu': '2',
+ 'inc_mixup': None,
+ 'isReplaceFC': True,
+ 'lamda_proto': 0.0,
+ 'lr': Namespace(lr_std=0.01, lr_base=0.01, lr_new=0.1, lr_cec_base=0.0002, lr_sis_base=0.0002, lrg=0.0002),
+ 'model_dir': Namespace(s0_model_dir=None, sf_model_dir=None),
+ 'network': Namespace(temperature=16, base_mode='ft_cos', new_mode='avg_cos'),
+ 'num_all': 89,
+ 'num_base': 59,
+ 'num_novel': 30,
+ 'num_session': 7,
+ 'optimizer': Namespace(decay=0.0005, momentum=0.9),
+ 'pit': True,
+ 'pit_mixup_alpha': 0.6,
+ 'pre_cutmix_alpha': 1.0,
+ 'pre_cutmix_prob': 0.4,
+ 'pre_idty_prob': 0.6,
+ 'pre_mixup_alpha': 0.8,
+ 'pre_mixup_prob': 0.0,
+ 'project': 'pitsc',
+ 'scheduler': Namespace(schedule='Step', milestones=[40, 80], step=40, gamma=0.5),
+ 'seed': 28,
+ 'seq_sample': False,
+ 'shot': 5,
+ 'start_session': 0,
+ 'stochastic': True,
+ 'strategy': Namespace(data_init=True, data_init_new=True, set_no_val=False, seq_sample=False),
+ 'test_times': 10,
+ 'tmp_train': False,
+ 'way': 5}
+use gpu: [2]
+create folder: checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00
+random init params
+==> Classes for this standard train stage:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:44<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.36017, 'base_acc': 0.36017, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.36017, 'sess0_acc': 0.36017, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 0, standard test, loss=2.6404 acc=0.3602
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/std_train20_max_acc.pth
+best epoch 0, best val acc=36.017
+epoch:000,lr:0.0100,training_loss:3.90088,training_acc:0.53698,val_loss:2.64038,val_acc:0.36017
+This epoch takes 55 seconds 
+still need around 18.49 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:41<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.40042, 'base_acc': 0.40042, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.40042, 'sess0_acc': 0.40042, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 1, standard test, loss=2.4388 acc=0.4004
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/std_train20_max_acc.pth
+best epoch 1, best val acc=40.042
+epoch:001,lr:0.0100,training_loss:3.26525,training_acc:0.71970,val_loss:2.43881,val_acc:0.40042
+This epoch takes 53 seconds 
+still need around 16.84 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:41<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.43873, 'base_acc': 0.43873, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.43873, 'sess0_acc': 0.43873, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 2, standard test, loss=2.4017 acc=0.4387
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/std_train20_max_acc.pth
+best epoch 2, best val acc=43.873
+epoch:002,lr:0.0100,training_loss:3.07123,training_acc:0.75675,val_loss:2.40170,val_acc:0.43873
+This epoch takes 52 seconds 
+still need around 15.80 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.42822, 'base_acc': 0.42822, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.42822, 'sess0_acc': 0.42822, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 3, standard test, loss=2.4438 acc=0.4282
+best epoch 2, best val acc=43.873
+epoch:003,lr:0.0100,training_loss:2.93973,training_acc:0.79925,val_loss:2.44384,val_acc:0.42822
+This epoch takes 53 seconds 
+still need around 15.20 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:41<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.36017, 'base_acc': 0.36017, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.36017, 'sess0_acc': 0.36017, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 4, standard test, loss=2.7276 acc=0.3602
+best epoch 2, best val acc=43.873
+epoch:004,lr:0.0100,training_loss:3.06663,training_acc:0.81245,val_loss:2.72757,val_acc:0.36017
+This epoch takes 53 seconds 
+still need around 14.17 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.4272, 'base_acc': 0.4272, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.4272, 'sess0_acc': 0.4272, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 5, standard test, loss=2.4509 acc=0.4272
+best epoch 2, best val acc=43.873
+epoch:005,lr:0.0100,training_loss:3.07667,training_acc:0.82649,val_loss:2.45091,val_acc:0.42720
+This epoch takes 53 seconds 
+still need around 13.39 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.43305, 'base_acc': 0.43305, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.43305, 'sess0_acc': 0.43305, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 6, standard test, loss=2.5079 acc=0.4330
+best epoch 2, best val acc=43.873
+epoch:006,lr:0.0100,training_loss:3.05419,training_acc:0.85074,val_loss:2.50791,val_acc:0.43305
+This epoch takes 53 seconds 
+still need around 12.40 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.42364, 'base_acc': 0.42364, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.42364, 'sess0_acc': 0.42364, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 7, standard test, loss=2.5785 acc=0.4236
+best epoch 2, best val acc=43.873
+epoch:007,lr:0.0100,training_loss:2.86664,training_acc:0.84908,val_loss:2.57853,val_acc:0.42364
+This epoch takes 53 seconds 
+still need around 11.51 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:41<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.39059, 'base_acc': 0.39059, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.39059, 'sess0_acc': 0.39059, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 8, standard test, loss=2.7008 acc=0.3906
+best epoch 2, best val acc=43.873
+epoch:008,lr:0.0100,training_loss:2.74669,training_acc:0.86005,val_loss:2.70085,val_acc:0.39059
+This epoch takes 52 seconds 
+still need around 10.57 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:41<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.39636, 'base_acc': 0.39636, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.39636, 'sess0_acc': 0.39636, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 9, standard test, loss=2.7220 acc=0.3964
+best epoch 2, best val acc=43.873
+epoch:009,lr:0.0100,training_loss:2.94819,training_acc:0.86306,val_loss:2.72204,val_acc:0.39636
+This epoch takes 53 seconds 
+still need around 9.74 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.41042, 'base_acc': 0.41042, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.41042, 'sess0_acc': 0.41042, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 10, standard test, loss=2.6370 acc=0.4104
+best epoch 2, best val acc=43.873
+epoch:010,lr:0.0100,training_loss:3.18708,training_acc:0.86361,val_loss:2.63701,val_acc:0.41042
+This epoch takes 53 seconds 
+still need around 8.92 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.42136, 'base_acc': 0.42136, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.42136, 'sess0_acc': 0.42136, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 11, standard test, loss=2.7004 acc=0.4214
+best epoch 2, best val acc=43.873
+epoch:011,lr:0.0100,training_loss:2.99696,training_acc:0.88156,val_loss:2.70036,val_acc:0.42136
+This epoch takes 53 seconds 
+still need around 7.98 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.42347, 'base_acc': 0.42347, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.42347, 'sess0_acc': 0.42347, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 12, standard test, loss=2.6744 acc=0.4235
+best epoch 2, best val acc=43.873
+epoch:012,lr:0.0100,training_loss:3.06192,training_acc:0.87549,val_loss:2.67438,val_acc:0.42347
+This epoch takes 53 seconds 
+still need around 7.10 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:41<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.38525, 'base_acc': 0.38525, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.38525, 'sess0_acc': 0.38525, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 13, standard test, loss=2.8567 acc=0.3852
+best epoch 2, best val acc=43.873
+epoch:013,lr:0.0100,training_loss:3.24042,training_acc:0.88477,val_loss:2.85673,val_acc:0.38525
+This epoch takes 52 seconds 
+still need around 6.17 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.40746, 'base_acc': 0.40746, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.40746, 'sess0_acc': 0.40746, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 14, standard test, loss=2.8921 acc=0.4075
+best epoch 2, best val acc=43.873
+epoch:014,lr:0.0100,training_loss:3.09737,training_acc:0.89915,val_loss:2.89213,val_acc:0.40746
+This epoch takes 53 seconds 
+still need around 5.31 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.40364, 'base_acc': 0.40364, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.40364, 'sess0_acc': 0.40364, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 15, standard test, loss=2.8611 acc=0.4036
+best epoch 2, best val acc=43.873
+epoch:015,lr:0.0100,training_loss:3.08724,training_acc:0.88384,val_loss:2.86115,val_acc:0.40364
+This epoch takes 53 seconds 
+still need around 4.43 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.40161, 'base_acc': 0.40161, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.40161, 'sess0_acc': 0.40161, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 16, standard test, loss=2.8637 acc=0.4016
+best epoch 2, best val acc=43.873
+epoch:016,lr:0.0100,training_loss:3.04522,training_acc:0.89111,val_loss:2.86367,val_acc:0.40161
+This epoch takes 53 seconds 
+still need around 3.55 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:41<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.41322, 'base_acc': 0.41322, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.41322, 'sess0_acc': 0.41322, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 17, standard test, loss=2.7653 acc=0.4132
+best epoch 2, best val acc=43.873
+epoch:017,lr:0.0100,training_loss:3.75229,training_acc:0.86928,val_loss:2.76531,val_acc:0.41322
+This epoch takes 53 seconds 
+still need around 2.65 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.39008, 'base_acc': 0.39008, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.39008, 'sess0_acc': 0.39008, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 18, standard test, loss=2.8609 acc=0.3901
+best epoch 2, best val acc=43.873
+epoch:018,lr:0.0100,training_loss:3.26695,training_acc:0.88935,val_loss:2.86087,val_acc:0.39008
+This epoch takes 53 seconds 
+still need around 1.78 mins to finish
+  0%|          | 0/369 [00:00<?, ?it/s]  0%|          | 0/369 [00:42<?, ?it/s]
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:10<?, ?it/s]
+{'all_acc': 0.41212, 'base_acc': 0.41212, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.41212, 'sess0_acc': 0.41212, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 19, standard test, loss=2.8057 acc=0.4121
+best epoch 2, best val acc=43.873
+epoch:019,lr:0.0100,training_loss:3.28642,training_acc:0.89185,val_loss:2.80566,val_acc:0.41212
+This epoch takes 53 seconds 
+still need around 0.90 mins to finish
+Standard(not load) test loss=2.806, test acc=0.412
+Replace the fc with average embedding, and save it to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+  0%|          | 0/118 [00:00<?, ?it/s]  0%|          | 0/118 [00:11<?, ?it/s]
+{'all_acc': 0.44881, 'base_acc': 0.44881, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.44881, 'sess0_acc': 0.44881, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+epo 0, standard test, loss=2.1924 acc=0.4488
+The NEW(after data init) best test acc of standard train stage=44.881
+new classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 2, best test acc=44.881
+epoch:000,lr:0.0100,training_ce_loss:1.28245, training_reg_loss:0.00000,training_acc:0.67789,test_loss:2.23232,test_acc:0.43051
+This epoch takes 31 seconds 
+still need around 10.39 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+best epoch 1, best test acc=45.907
+epoch:001,lr:0.0100,training_ce_loss:1.17807, training_reg_loss:0.00000,training_acc:0.70218,test_loss:2.11065,test_acc:0.45907
+This epoch takes 31 seconds 
+still need around 9.92 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 1, best test acc=45.907
+epoch:002,lr:0.0100,training_ce_loss:1.07946, training_reg_loss:0.00000,training_acc:0.72953,test_loss:2.16104,test_acc:0.44508
+This epoch takes 31 seconds 
+still need around 9.37 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+********A better model is found!!**********
+Saving model to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+best epoch 3, best test acc=46.856
+epoch:003,lr:0.0100,training_ce_loss:1.04845, training_reg_loss:0.00000,training_acc:0.75062,test_loss:2.08481,test_acc:0.46856
+This epoch takes 31 seconds 
+still need around 8.84 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:004,lr:0.0100,training_ce_loss:0.98645, training_reg_loss:0.00000,training_acc:0.76575,test_loss:2.13369,test_acc:0.45610
+This epoch takes 31 seconds 
+still need around 8.32 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:005,lr:0.0100,training_ce_loss:0.93977, training_reg_loss:0.00000,training_acc:0.77825,test_loss:2.17584,test_acc:0.44881
+This epoch takes 31 seconds 
+still need around 7.83 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:006,lr:0.0100,training_ce_loss:0.93504, training_reg_loss:0.00000,training_acc:0.78189,test_loss:2.13744,test_acc:0.45610
+This epoch takes 31 seconds 
+still need around 7.28 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:007,lr:0.0100,training_ce_loss:0.90912, training_reg_loss:0.00000,training_acc:0.78909,test_loss:2.14057,test_acc:0.45610
+This epoch takes 31 seconds 
+still need around 6.80 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:008,lr:0.0100,training_ce_loss:0.88662, training_reg_loss:0.00000,training_acc:0.79207,test_loss:2.13946,test_acc:0.45093
+This epoch takes 31 seconds 
+still need around 6.34 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:009,lr:0.0100,training_ce_loss:0.87045, training_reg_loss:0.00000,training_acc:0.80080,test_loss:2.17534,test_acc:0.44864
+This epoch takes 31 seconds 
+still need around 5.78 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:010,lr:0.0100,training_ce_loss:0.83040, training_reg_loss:0.00000,training_acc:0.80720,test_loss:2.18563,test_acc:0.44763
+This epoch takes 31 seconds 
+still need around 5.31 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:011,lr:0.0100,training_ce_loss:0.81475, training_reg_loss:0.00000,training_acc:0.81018,test_loss:2.20841,test_acc:0.44212
+This epoch takes 31 seconds 
+still need around 4.77 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:012,lr:0.0100,training_ce_loss:0.78568, training_reg_loss:0.00000,training_acc:0.81847,test_loss:2.22075,test_acc:0.44280
+This epoch takes 31 seconds 
+still need around 4.26 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:013,lr:0.0100,training_ce_loss:0.76416, training_reg_loss:0.00000,training_acc:0.82553,test_loss:2.23844,test_acc:0.43720
+This epoch takes 31 seconds 
+still need around 3.69 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:014,lr:0.0100,training_ce_loss:0.73459, training_reg_loss:0.00000,training_acc:0.83905,test_loss:2.26462,test_acc:0.42881
+This epoch takes 31 seconds 
+still need around 3.18 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:015,lr:0.0100,training_ce_loss:0.69264, training_reg_loss:0.00000,training_acc:0.85687,test_loss:2.22162,test_acc:0.44076
+This epoch takes 31 seconds 
+still need around 2.65 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:016,lr:0.0100,training_ce_loss:0.67318, training_reg_loss:0.00000,training_acc:0.85869,test_loss:2.26329,test_acc:0.43831
+This epoch takes 31 seconds 
+still need around 2.11 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:017,lr:0.0100,training_ce_loss:0.66301, training_reg_loss:0.00000,training_acc:0.86284,test_loss:2.22634,test_acc:0.43966
+This epoch takes 32 seconds 
+still need around 1.61 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:018,lr:0.0100,training_ce_loss:0.72367, training_reg_loss:0.00000,training_acc:0.83891,test_loss:2.25639,test_acc:0.43475
+This epoch takes 31 seconds 
+still need around 1.06 mins to finish this session
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:20<?, ?it/s]
+best epoch 3, best test acc=46.856
+epoch:019,lr:0.0100,training_ce_loss:0.64127, training_reg_loss:0.00000,training_acc:0.86909,test_loss:2.21815,test_acc:0.44449
+This epoch takes 32 seconds 
+still need around 0.53 mins to finish this session
+Updating old class with class means 
+Replace the fc with average embedding, and save it to :checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/session0_max_acc.pth
+The new best test acc of base session=47.458
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47458, 'base_acc': 0.47458, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47458, 'sess0_acc': 0.47458, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.458
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.458
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.44945, 'base_acc': 0.46517, 'novel_acc': 0.264, 'former_acc': 0.46517, 'cur_acc': 0.264, 'sess0_acc': 0.46517, 'sess1_acc': 0.264, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 44.945
+Novel classes cumulative accuracy: 26.400000000000002
+session: 0 test accuracy: 46.516999999999996
+session: 1 test accuracy: 26.400000000000002
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42188, 'base_acc': 0.45949, 'novel_acc': 0.2, 'former_acc': 0.44344, 'cur_acc': 0.146, 'sess0_acc': 0.45949, 'sess1_acc': 0.254, 'sess2_acc': 0.146, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.187999999999995
+Novel classes cumulative accuracy: 20.0
+session: 0 test accuracy: 45.949
+session: 1 test accuracy: 25.4
+session: 2 test accuracy: 14.6
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40851, 'base_acc': 0.45161, 'novel_acc': 0.239, 'former_acc': 0.41442, 'cur_acc': 0.327, 'sess0_acc': 0.45161, 'sess1_acc': 0.248, 'sess2_acc': 0.142, 'sess3_acc': 0.327, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.851
+Novel classes cumulative accuracy: 23.9
+session: 0 test accuracy: 45.161
+session: 1 test accuracy: 24.8
+session: 2 test accuracy: 14.2
+session: 3 test accuracy: 32.7
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40044, 'base_acc': 0.44381, 'novel_acc': 0.2725, 'former_acc': 0.40027, 'cur_acc': 0.403, 'sess0_acc': 0.44381, 'sess1_acc': 0.239, 'sess2_acc': 0.128, 'sess3_acc': 0.32, 'sess4_acc': 0.403, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.044000000000004
+Novel classes cumulative accuracy: 27.250000000000004
+session: 0 test accuracy: 44.381
+session: 1 test accuracy: 23.9
+session: 2 test accuracy: 12.8
+session: 3 test accuracy: 32.0
+session: 4 test accuracy: 40.300000000000004
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39089, 'base_acc': 0.43746, 'novel_acc': 0.281, 'former_acc': 0.39405, 'cur_acc': 0.341, 'sess0_acc': 0.43746, 'sess1_acc': 0.222, 'sess2_acc': 0.127, 'sess3_acc': 0.316, 'sess4_acc': 0.399, 'sess5_acc': 0.341, 'sess6_acc': None}
+Overall cumulative accuracy: 39.089
+Novel classes cumulative accuracy: 28.1
+session: 0 test accuracy: 43.746
+session: 1 test accuracy: 22.2
+session: 2 test accuracy: 12.7
+session: 3 test accuracy: 31.6
+session: 4 test accuracy: 39.900000000000006
+session: 5 test accuracy: 34.1
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.37742, 'base_acc': 0.43119, 'novel_acc': 0.27167, 'former_acc': 0.3856, 'cur_acc': 0.24, 'sess0_acc': 0.43119, 'sess1_acc': 0.217, 'sess2_acc': 0.125, 'sess3_acc': 0.316, 'sess4_acc': 0.394, 'sess5_acc': 0.338, 'sess6_acc': 0.24}
+Overall cumulative accuracy: 37.742
+Novel classes cumulative accuracy: 27.167
+session: 0 test accuracy: 43.119
+session: 1 test accuracy: 21.7
+session: 2 test accuracy: 12.5
+session: 3 test accuracy: 31.6
+session: 4 test accuracy: 39.4
+session: 5 test accuracy: 33.800000000000004
+session: 6 test accuracy: 24.0
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47458, 'base_acc': 0.47458, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47458, 'sess0_acc': 0.47458, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.458
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.458
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.44516, 'base_acc': 0.46356, 'novel_acc': 0.228, 'former_acc': 0.46356, 'cur_acc': 0.228, 'sess0_acc': 0.46356, 'sess1_acc': 0.228, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 44.516
+Novel classes cumulative accuracy: 22.8
+session: 0 test accuracy: 46.356
+session: 1 test accuracy: 22.8
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.41899, 'base_acc': 0.45771, 'novel_acc': 0.1905, 'former_acc': 0.4393, 'cur_acc': 0.159, 'sess0_acc': 0.45771, 'sess1_acc': 0.222, 'sess2_acc': 0.159, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 41.899
+Novel classes cumulative accuracy: 19.05
+session: 0 test accuracy: 45.771
+session: 1 test accuracy: 22.2
+session: 2 test accuracy: 15.9
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40676, 'base_acc': 0.45271, 'novel_acc': 0.226, 'former_acc': 0.41362, 'cur_acc': 0.312, 'sess0_acc': 0.45271, 'sess1_acc': 0.216, 'sess2_acc': 0.15, 'sess3_acc': 0.312, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.676
+Novel classes cumulative accuracy: 22.6
+session: 0 test accuracy: 45.271
+session: 1 test accuracy: 21.6
+session: 2 test accuracy: 15.0
+session: 3 test accuracy: 31.2
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40386, 'base_acc': 0.44856, 'novel_acc': 0.272, 'former_acc': 0.40101, 'cur_acc': 0.446, 'sess0_acc': 0.44856, 'sess1_acc': 0.213, 'sess2_acc': 0.127, 'sess3_acc': 0.302, 'sess4_acc': 0.446, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.386
+Novel classes cumulative accuracy: 27.200000000000003
+session: 0 test accuracy: 44.856
+session: 1 test accuracy: 21.3
+session: 2 test accuracy: 12.7
+session: 3 test accuracy: 30.2
+session: 4 test accuracy: 44.6
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.3919, 'base_acc': 0.43915, 'novel_acc': 0.2804, 'former_acc': 0.39475, 'cur_acc': 0.347, 'sess0_acc': 0.43915, 'sess1_acc': 0.199, 'sess2_acc': 0.125, 'sess3_acc': 0.287, 'sess4_acc': 0.444, 'sess5_acc': 0.347, 'sess6_acc': None}
+Overall cumulative accuracy: 39.190000000000005
+Novel classes cumulative accuracy: 28.04
+session: 0 test accuracy: 43.915
+session: 1 test accuracy: 19.900000000000002
+session: 2 test accuracy: 12.5
+session: 3 test accuracy: 28.7
+session: 4 test accuracy: 44.4
+session: 5 test accuracy: 34.699999999999996
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.37736, 'base_acc': 0.43458, 'novel_acc': 0.26483, 'former_acc': 0.3881, 'cur_acc': 0.197, 'sess0_acc': 0.43458, 'sess1_acc': 0.196, 'sess2_acc': 0.124, 'sess3_acc': 0.287, 'sess4_acc': 0.441, 'sess5_acc': 0.344, 'sess6_acc': 0.197}
+Overall cumulative accuracy: 37.736
+Novel classes cumulative accuracy: 26.483
+session: 0 test accuracy: 43.458000000000006
+session: 1 test accuracy: 19.6
+session: 2 test accuracy: 12.4
+session: 3 test accuracy: 28.7
+session: 4 test accuracy: 44.1
+session: 5 test accuracy: 34.4
+session: 6 test accuracy: 19.7
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47466, 'base_acc': 0.47466, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47466, 'sess0_acc': 0.47466, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.466
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.466
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.45156, 'base_acc': 0.4628, 'novel_acc': 0.319, 'former_acc': 0.4628, 'cur_acc': 0.319, 'sess0_acc': 0.4628, 'sess1_acc': 0.319, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 45.156
+Novel classes cumulative accuracy: 31.900000000000002
+session: 0 test accuracy: 46.28
+session: 1 test accuracy: 31.900000000000002
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42341, 'base_acc': 0.45508, 'novel_acc': 0.2365, 'former_acc': 0.44422, 'cur_acc': 0.157, 'sess0_acc': 0.45508, 'sess1_acc': 0.316, 'sess2_acc': 0.157, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.341
+Novel classes cumulative accuracy: 23.65
+session: 0 test accuracy: 45.507999999999996
+session: 1 test accuracy: 31.6
+session: 2 test accuracy: 15.7
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.41209, 'base_acc': 0.44856, 'novel_acc': 0.26867, 'former_acc': 0.4171, 'cur_acc': 0.343, 'sess0_acc': 0.44856, 'sess1_acc': 0.31, 'sess2_acc': 0.153, 'sess3_acc': 0.343, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 41.209
+Novel classes cumulative accuracy: 26.867
+session: 0 test accuracy: 44.856
+session: 1 test accuracy: 31.0
+session: 2 test accuracy: 15.299999999999999
+session: 3 test accuracy: 34.300000000000004
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40487, 'base_acc': 0.44466, 'novel_acc': 0.2875, 'former_acc': 0.4077, 'cur_acc': 0.363, 'sess0_acc': 0.44466, 'sess1_acc': 0.305, 'sess2_acc': 0.15, 'sess3_acc': 0.332, 'sess4_acc': 0.363, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.487
+Novel classes cumulative accuracy: 28.749999999999996
+session: 0 test accuracy: 44.466
+session: 1 test accuracy: 30.5
+session: 2 test accuracy: 15.0
+session: 3 test accuracy: 33.2
+session: 4 test accuracy: 36.3
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39262, 'base_acc': 0.4372, 'novel_acc': 0.2874, 'former_acc': 0.39608, 'cur_acc': 0.338, 'sess0_acc': 0.4372, 'sess1_acc': 0.288, 'sess2_acc': 0.145, 'sess3_acc': 0.305, 'sess4_acc': 0.361, 'sess5_acc': 0.338, 'sess6_acc': None}
+Overall cumulative accuracy: 39.262
+Novel classes cumulative accuracy: 28.74
+session: 0 test accuracy: 43.72
+session: 1 test accuracy: 28.799999999999997
+session: 2 test accuracy: 14.499999999999998
+session: 3 test accuracy: 30.5
+session: 4 test accuracy: 36.1
+session: 5 test accuracy: 33.800000000000004
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.37882, 'base_acc': 0.43102, 'novel_acc': 0.27617, 'former_acc': 0.38708, 'cur_acc': 0.24, 'sess0_acc': 0.43102, 'sess1_acc': 0.278, 'sess2_acc': 0.141, 'sess3_acc': 0.304, 'sess4_acc': 0.357, 'sess5_acc': 0.337, 'sess6_acc': 0.24}
+Overall cumulative accuracy: 37.882
+Novel classes cumulative accuracy: 27.617000000000004
+session: 0 test accuracy: 43.102000000000004
+session: 1 test accuracy: 27.800000000000004
+session: 2 test accuracy: 14.099999999999998
+session: 3 test accuracy: 30.4
+session: 4 test accuracy: 35.699999999999996
+session: 5 test accuracy: 33.7
+session: 6 test accuracy: 24.0
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47483, 'base_acc': 0.47483, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47483, 'sess0_acc': 0.47483, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.483
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.483
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.44719, 'base_acc': 0.46271, 'novel_acc': 0.264, 'former_acc': 0.46271, 'cur_acc': 0.264, 'sess0_acc': 0.46271, 'sess1_acc': 0.264, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 44.718999999999994
+Novel classes cumulative accuracy: 26.400000000000002
+session: 0 test accuracy: 46.271
+session: 1 test accuracy: 26.400000000000002
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42601, 'base_acc': 0.45737, 'novel_acc': 0.241, 'former_acc': 0.44195, 'cur_acc': 0.222, 'sess0_acc': 0.45737, 'sess1_acc': 0.26, 'sess2_acc': 0.222, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.601
+Novel classes cumulative accuracy: 24.099999999999998
+session: 0 test accuracy: 45.737
+session: 1 test accuracy: 26.0
+session: 2 test accuracy: 22.2
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.415, 'base_acc': 0.44915, 'novel_acc': 0.28067, 'former_acc': 0.41855, 'cur_acc': 0.366, 'sess0_acc': 0.44915, 'sess1_acc': 0.254, 'sess2_acc': 0.222, 'sess3_acc': 0.366, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 41.5
+Novel classes cumulative accuracy: 28.066999999999997
+session: 0 test accuracy: 44.915
+session: 1 test accuracy: 25.4
+session: 2 test accuracy: 22.2
+session: 3 test accuracy: 36.6
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.41057, 'base_acc': 0.44534, 'novel_acc': 0.308, 'former_acc': 0.40966, 'cur_acc': 0.424, 'sess0_acc': 0.44534, 'sess1_acc': 0.243, 'sess2_acc': 0.208, 'sess3_acc': 0.357, 'sess4_acc': 0.424, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 41.057
+Novel classes cumulative accuracy: 30.8
+session: 0 test accuracy: 44.534
+session: 1 test accuracy: 24.3
+session: 2 test accuracy: 20.8
+session: 3 test accuracy: 35.699999999999996
+session: 4 test accuracy: 42.4
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39851, 'base_acc': 0.43712, 'novel_acc': 0.3074, 'former_acc': 0.40291, 'cur_acc': 0.329, 'sess0_acc': 0.43712, 'sess1_acc': 0.232, 'sess2_acc': 0.207, 'sess3_acc': 0.349, 'sess4_acc': 0.42, 'sess5_acc': 0.329, 'sess6_acc': None}
+Overall cumulative accuracy: 39.851
+Novel classes cumulative accuracy: 30.740000000000002
+session: 0 test accuracy: 43.712
+session: 1 test accuracy: 23.200000000000003
+session: 2 test accuracy: 20.7
+session: 3 test accuracy: 34.9
+session: 4 test accuracy: 42.0
+session: 5 test accuracy: 32.9
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.38685, 'base_acc': 0.43093, 'novel_acc': 0.30017, 'former_acc': 0.39286, 'cur_acc': 0.286, 'sess0_acc': 0.43093, 'sess1_acc': 0.224, 'sess2_acc': 0.201, 'sess3_acc': 0.349, 'sess4_acc': 0.414, 'sess5_acc': 0.327, 'sess6_acc': 0.286}
+Overall cumulative accuracy: 38.685
+Novel classes cumulative accuracy: 30.017
+session: 0 test accuracy: 43.092999999999996
+session: 1 test accuracy: 22.400000000000002
+session: 2 test accuracy: 20.1
+session: 3 test accuracy: 34.9
+session: 4 test accuracy: 41.4
+session: 5 test accuracy: 32.7
+session: 6 test accuracy: 28.599999999999998
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47508, 'base_acc': 0.47508, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47508, 'sess0_acc': 0.47508, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.508
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.508
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.44914, 'base_acc': 0.46508, 'novel_acc': 0.261, 'former_acc': 0.46508, 'cur_acc': 0.261, 'sess0_acc': 0.46508, 'sess1_acc': 0.261, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 44.914
+Novel classes cumulative accuracy: 26.1
+session: 0 test accuracy: 46.508
+session: 1 test accuracy: 26.1
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42, 'base_acc': 0.45898, 'novel_acc': 0.19, 'former_acc': 0.44234, 'cur_acc': 0.134, 'sess0_acc': 0.45898, 'sess1_acc': 0.246, 'sess2_acc': 0.134, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.0
+Novel classes cumulative accuracy: 19.0
+session: 0 test accuracy: 45.898
+session: 1 test accuracy: 24.6
+session: 2 test accuracy: 13.4
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40655, 'base_acc': 0.45068, 'novel_acc': 0.233, 'former_acc': 0.4121, 'cur_acc': 0.33, 'sess0_acc': 0.45068, 'sess1_acc': 0.241, 'sess2_acc': 0.128, 'sess3_acc': 0.33, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.655
+Novel classes cumulative accuracy: 23.3
+session: 0 test accuracy: 45.068000000000005
+session: 1 test accuracy: 24.099999999999998
+session: 2 test accuracy: 12.8
+session: 3 test accuracy: 33.0
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.3931, 'base_acc': 0.44314, 'novel_acc': 0.2455, 'former_acc': 0.39912, 'cur_acc': 0.304, 'sess0_acc': 0.44314, 'sess1_acc': 0.23, 'sess2_acc': 0.123, 'sess3_acc': 0.325, 'sess4_acc': 0.304, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 39.31
+Novel classes cumulative accuracy: 24.55
+session: 0 test accuracy: 44.314
+session: 1 test accuracy: 23.0
+session: 2 test accuracy: 12.3
+session: 3 test accuracy: 32.5
+session: 4 test accuracy: 30.4
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.38387, 'base_acc': 0.43746, 'novel_acc': 0.2574, 'former_acc': 0.38741, 'cur_acc': 0.328, 'sess0_acc': 0.43746, 'sess1_acc': 0.225, 'sess2_acc': 0.119, 'sess3_acc': 0.314, 'sess4_acc': 0.301, 'sess5_acc': 0.328, 'sess6_acc': None}
+Overall cumulative accuracy: 38.387
+Novel classes cumulative accuracy: 25.740000000000002
+session: 0 test accuracy: 43.746
+session: 1 test accuracy: 22.5
+session: 2 test accuracy: 11.899999999999999
+session: 3 test accuracy: 31.4
+session: 4 test accuracy: 30.099999999999998
+session: 5 test accuracy: 32.800000000000004
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.37011, 'base_acc': 0.43195, 'novel_acc': 0.2485, 'former_acc': 0.37833, 'cur_acc': 0.232, 'sess0_acc': 0.43195, 'sess1_acc': 0.215, 'sess2_acc': 0.115, 'sess3_acc': 0.313, 'sess4_acc': 0.288, 'sess5_acc': 0.328, 'sess6_acc': 0.232}
+Overall cumulative accuracy: 37.011
+Novel classes cumulative accuracy: 24.85
+session: 0 test accuracy: 43.195
+session: 1 test accuracy: 21.5
+session: 2 test accuracy: 11.5
+session: 3 test accuracy: 31.3
+session: 4 test accuracy: 28.799999999999997
+session: 5 test accuracy: 32.800000000000004
+session: 6 test accuracy: 23.200000000000003
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47517, 'base_acc': 0.47517, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47517, 'sess0_acc': 0.47517, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.516999999999996
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.516999999999996
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.44492, 'base_acc': 0.46068, 'novel_acc': 0.259, 'former_acc': 0.46068, 'cur_acc': 0.259, 'sess0_acc': 0.46068, 'sess1_acc': 0.259, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 44.492
+Novel classes cumulative accuracy: 25.900000000000002
+session: 0 test accuracy: 46.068
+session: 1 test accuracy: 25.900000000000002
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42181, 'base_acc': 0.45492, 'novel_acc': 0.2265, 'former_acc': 0.43859, 'cur_acc': 0.207, 'sess0_acc': 0.45492, 'sess1_acc': 0.246, 'sess2_acc': 0.207, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.181000000000004
+Novel classes cumulative accuracy: 22.650000000000002
+session: 0 test accuracy: 45.492
+session: 1 test accuracy: 24.6
+session: 2 test accuracy: 20.7
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.41284, 'base_acc': 0.44941, 'novel_acc': 0.269, 'former_acc': 0.4163, 'cur_acc': 0.365, 'sess0_acc': 0.44941, 'sess1_acc': 0.241, 'sess2_acc': 0.201, 'sess3_acc': 0.365, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 41.284
+Novel classes cumulative accuracy: 26.900000000000002
+session: 0 test accuracy: 44.940999999999995
+session: 1 test accuracy: 24.099999999999998
+session: 2 test accuracy: 20.1
+session: 3 test accuracy: 36.5
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40462, 'base_acc': 0.44534, 'novel_acc': 0.2845, 'former_acc': 0.40649, 'cur_acc': 0.377, 'sess0_acc': 0.44534, 'sess1_acc': 0.217, 'sess2_acc': 0.198, 'sess3_acc': 0.346, 'sess4_acc': 0.377, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.461999999999996
+Novel classes cumulative accuracy: 28.449999999999996
+session: 0 test accuracy: 44.534
+session: 1 test accuracy: 21.7
+session: 2 test accuracy: 19.8
+session: 3 test accuracy: 34.599999999999994
+session: 4 test accuracy: 37.7
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39387, 'base_acc': 0.43551, 'novel_acc': 0.2956, 'former_acc': 0.39494, 'cur_acc': 0.377, 'sess0_acc': 0.43551, 'sess1_acc': 0.192, 'sess2_acc': 0.195, 'sess3_acc': 0.337, 'sess4_acc': 0.377, 'sess5_acc': 0.377, 'sess6_acc': None}
+Overall cumulative accuracy: 39.387
+Novel classes cumulative accuracy: 29.56
+session: 0 test accuracy: 43.551
+session: 1 test accuracy: 19.2
+session: 2 test accuracy: 19.5
+session: 3 test accuracy: 33.7
+session: 4 test accuracy: 37.7
+session: 5 test accuracy: 37.7
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.3809, 'base_acc': 0.42949, 'novel_acc': 0.28533, 'former_acc': 0.38839, 'cur_acc': 0.255, 'sess0_acc': 0.42949, 'sess1_acc': 0.188, 'sess2_acc': 0.194, 'sess3_acc': 0.335, 'sess4_acc': 0.369, 'sess5_acc': 0.371, 'sess6_acc': 0.255}
+Overall cumulative accuracy: 38.09
+Novel classes cumulative accuracy: 28.532999999999998
+session: 0 test accuracy: 42.949
+session: 1 test accuracy: 18.8
+session: 2 test accuracy: 19.400000000000002
+session: 3 test accuracy: 33.5
+session: 4 test accuracy: 36.9
+session: 5 test accuracy: 37.1
+session: 6 test accuracy: 25.5
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47508, 'base_acc': 0.47508, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47508, 'sess0_acc': 0.47508, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.508
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.508
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.44766, 'base_acc': 0.45958, 'novel_acc': 0.307, 'former_acc': 0.45958, 'cur_acc': 0.307, 'sess0_acc': 0.45958, 'sess1_acc': 0.307, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 44.766
+Novel classes cumulative accuracy: 30.7
+session: 0 test accuracy: 45.958
+session: 1 test accuracy: 30.7
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42007, 'base_acc': 0.45203, 'novel_acc': 0.2315, 'former_acc': 0.43984, 'cur_acc': 0.167, 'sess0_acc': 0.45203, 'sess1_acc': 0.296, 'sess2_acc': 0.167, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.007
+Novel classes cumulative accuracy: 23.150000000000002
+session: 0 test accuracy: 45.202999999999996
+session: 1 test accuracy: 29.599999999999998
+session: 2 test accuracy: 16.7
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40764, 'base_acc': 0.44466, 'novel_acc': 0.262, 'former_acc': 0.41319, 'cur_acc': 0.331, 'sess0_acc': 0.44466, 'sess1_acc': 0.295, 'sess2_acc': 0.16, 'sess3_acc': 0.331, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.764
+Novel classes cumulative accuracy: 26.200000000000003
+session: 0 test accuracy: 44.466
+session: 1 test accuracy: 29.5
+session: 2 test accuracy: 16.0
+session: 3 test accuracy: 33.1
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.4012, 'base_acc': 0.43932, 'novel_acc': 0.28875, 'former_acc': 0.40182, 'cur_acc': 0.392, 'sess0_acc': 0.43932, 'sess1_acc': 0.288, 'sess2_acc': 0.147, 'sess3_acc': 0.328, 'sess4_acc': 0.392, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.12
+Novel classes cumulative accuracy: 28.875
+session: 0 test accuracy: 43.932
+session: 1 test accuracy: 28.799999999999997
+session: 2 test accuracy: 14.7
+session: 3 test accuracy: 32.800000000000004
+session: 4 test accuracy: 39.2
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39381, 'base_acc': 0.43415, 'novel_acc': 0.2986, 'former_acc': 0.39532, 'cur_acc': 0.37, 'sess0_acc': 0.43415, 'sess1_acc': 0.269, 'sess2_acc': 0.145, 'sess3_acc': 0.321, 'sess4_acc': 0.388, 'sess5_acc': 0.37, 'sess6_acc': None}
+Overall cumulative accuracy: 39.381
+Novel classes cumulative accuracy: 29.86
+session: 0 test accuracy: 43.415
+session: 1 test accuracy: 26.900000000000002
+session: 2 test accuracy: 14.499999999999998
+session: 3 test accuracy: 32.1
+session: 4 test accuracy: 38.800000000000004
+session: 5 test accuracy: 37.0
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.38303, 'base_acc': 0.43136, 'novel_acc': 0.288, 'former_acc': 0.39089, 'cur_acc': 0.251, 'sess0_acc': 0.43136, 'sess1_acc': 0.261, 'sess2_acc': 0.145, 'sess3_acc': 0.321, 'sess4_acc': 0.383, 'sess5_acc': 0.367, 'sess6_acc': 0.251}
+Overall cumulative accuracy: 38.303
+Novel classes cumulative accuracy: 28.799999999999997
+session: 0 test accuracy: 43.136
+session: 1 test accuracy: 26.1
+session: 2 test accuracy: 14.499999999999998
+session: 3 test accuracy: 32.1
+session: 4 test accuracy: 38.3
+session: 5 test accuracy: 36.7
+session: 6 test accuracy: 25.1
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47542, 'base_acc': 0.47542, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47542, 'sess0_acc': 0.47542, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.542
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.542
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.45398, 'base_acc': 0.46644, 'novel_acc': 0.307, 'former_acc': 0.46644, 'cur_acc': 0.307, 'sess0_acc': 0.46644, 'sess1_acc': 0.307, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 45.397999999999996
+Novel classes cumulative accuracy: 30.7
+session: 0 test accuracy: 46.644000000000005
+session: 1 test accuracy: 30.7
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42507, 'base_acc': 0.45525, 'novel_acc': 0.247, 'former_acc': 0.44328, 'cur_acc': 0.192, 'sess0_acc': 0.45525, 'sess1_acc': 0.302, 'sess2_acc': 0.192, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.507
+Novel classes cumulative accuracy: 24.7
+session: 0 test accuracy: 45.525
+session: 1 test accuracy: 30.2
+session: 2 test accuracy: 19.2
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40946, 'base_acc': 0.45051, 'novel_acc': 0.248, 'former_acc': 0.42, 'cur_acc': 0.264, 'sess0_acc': 0.45051, 'sess1_acc': 0.291, 'sess2_acc': 0.189, 'sess3_acc': 0.264, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.946
+Novel classes cumulative accuracy: 24.8
+session: 0 test accuracy: 45.051
+session: 1 test accuracy: 29.099999999999998
+session: 2 test accuracy: 18.9
+session: 3 test accuracy: 26.400000000000002
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40582, 'base_acc': 0.44381, 'novel_acc': 0.29375, 'former_acc': 0.40284, 'cur_acc': 0.45, 'sess0_acc': 0.44381, 'sess1_acc': 0.289, 'sess2_acc': 0.18, 'sess3_acc': 0.256, 'sess4_acc': 0.45, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.582
+Novel classes cumulative accuracy: 29.375
+session: 0 test accuracy: 44.381
+session: 1 test accuracy: 28.9
+session: 2 test accuracy: 18.0
+session: 3 test accuracy: 25.6
+session: 4 test accuracy: 45.0
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39286, 'base_acc': 0.43407, 'novel_acc': 0.2956, 'former_acc': 0.39513, 'cur_acc': 0.357, 'sess0_acc': 0.43407, 'sess1_acc': 0.251, 'sess2_acc': 0.177, 'sess3_acc': 0.247, 'sess4_acc': 0.446, 'sess5_acc': 0.357, 'sess6_acc': None}
+Overall cumulative accuracy: 39.286
+Novel classes cumulative accuracy: 29.56
+session: 0 test accuracy: 43.407000000000004
+session: 1 test accuracy: 25.1
+session: 2 test accuracy: 17.7
+session: 3 test accuracy: 24.7
+session: 4 test accuracy: 44.6
+session: 5 test accuracy: 35.699999999999996
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.37955, 'base_acc': 0.42297, 'novel_acc': 0.29417, 'former_acc': 0.38387, 'cur_acc': 0.307, 'sess0_acc': 0.42297, 'sess1_acc': 0.239, 'sess2_acc': 0.176, 'sess3_acc': 0.247, 'sess4_acc': 0.444, 'sess5_acc': 0.352, 'sess6_acc': 0.307}
+Overall cumulative accuracy: 37.955
+Novel classes cumulative accuracy: 29.416999999999998
+session: 0 test accuracy: 42.297000000000004
+session: 1 test accuracy: 23.9
+session: 2 test accuracy: 17.599999999999998
+session: 3 test accuracy: 24.7
+session: 4 test accuracy: 44.4
+session: 5 test accuracy: 35.199999999999996
+session: 6 test accuracy: 30.7
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47542, 'base_acc': 0.47542, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47542, 'sess0_acc': 0.47542, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.542
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.542
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.44945, 'base_acc': 0.46186, 'novel_acc': 0.303, 'former_acc': 0.46186, 'cur_acc': 0.303, 'sess0_acc': 0.46186, 'sess1_acc': 0.303, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 44.945
+Novel classes cumulative accuracy: 30.3
+session: 0 test accuracy: 46.186
+session: 1 test accuracy: 30.3
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42109, 'base_acc': 0.45203, 'novel_acc': 0.2385, 'former_acc': 0.43977, 'cur_acc': 0.182, 'sess0_acc': 0.45203, 'sess1_acc': 0.295, 'sess2_acc': 0.182, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.109
+Novel classes cumulative accuracy: 23.849999999999998
+session: 0 test accuracy: 45.202999999999996
+session: 1 test accuracy: 29.5
+session: 2 test accuracy: 18.2
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40878, 'base_acc': 0.44508, 'novel_acc': 0.266, 'former_acc': 0.4142, 'cur_acc': 0.334, 'sess0_acc': 0.44508, 'sess1_acc': 0.292, 'sess2_acc': 0.172, 'sess3_acc': 0.334, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.878
+Novel classes cumulative accuracy: 26.6
+session: 0 test accuracy: 44.507999999999996
+session: 1 test accuracy: 29.2
+session: 2 test accuracy: 17.2
+session: 3 test accuracy: 33.4
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40487, 'base_acc': 0.44102, 'novel_acc': 0.29825, 'former_acc': 0.40358, 'cur_acc': 0.424, 'sess0_acc': 0.44102, 'sess1_acc': 0.278, 'sess2_acc': 0.165, 'sess3_acc': 0.326, 'sess4_acc': 0.424, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.487
+Novel classes cumulative accuracy: 29.825000000000003
+session: 0 test accuracy: 44.102000000000004
+session: 1 test accuracy: 27.800000000000004
+session: 2 test accuracy: 16.5
+session: 3 test accuracy: 32.6
+session: 4 test accuracy: 42.4
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39101, 'base_acc': 0.43466, 'novel_acc': 0.288, 'former_acc': 0.39728, 'cur_acc': 0.292, 'sess0_acc': 0.43466, 'sess1_acc': 0.26, 'sess2_acc': 0.156, 'sess3_acc': 0.318, 'sess4_acc': 0.414, 'sess5_acc': 0.292, 'sess6_acc': None}
+Overall cumulative accuracy: 39.101
+Novel classes cumulative accuracy: 28.799999999999997
+session: 0 test accuracy: 43.466
+session: 1 test accuracy: 26.0
+session: 2 test accuracy: 15.6
+session: 3 test accuracy: 31.8
+session: 4 test accuracy: 41.4
+session: 5 test accuracy: 29.2
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.37787, 'base_acc': 0.42585, 'novel_acc': 0.2835, 'former_acc': 0.38375, 'cur_acc': 0.279, 'sess0_acc': 0.42585, 'sess1_acc': 0.254, 'sess2_acc': 0.154, 'sess3_acc': 0.318, 'sess4_acc': 0.407, 'sess5_acc': 0.289, 'sess6_acc': 0.279}
+Overall cumulative accuracy: 37.787
+Novel classes cumulative accuracy: 28.349999999999998
+session: 0 test accuracy: 42.585
+session: 1 test accuracy: 25.4
+session: 2 test accuracy: 15.4
+session: 3 test accuracy: 31.8
+session: 4 test accuracy: 40.699999999999996
+session: 5 test accuracy: 28.9
+session: 6 test accuracy: 27.900000000000002
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+test classes for this session:
+ [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58]
+{'all_acc': 0.47534, 'base_acc': 0.47534, 'novel_acc': None, 'former_acc': None, 'cur_acc': 0.47534, 'sess0_acc': 0.47534, 'sess1_acc': None, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 47.534
+Novel classes cumulative accuracy: 0
+session: 0 test accuracy: 47.534
+protos, radius torch.Size([59, 512]) 2.2582647976794297
+training session: [1]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.45312, 'base_acc': 0.46305, 'novel_acc': 0.336, 'former_acc': 0.46305, 'cur_acc': 0.336, 'sess0_acc': 0.46305, 'sess1_acc': 0.336, 'sess2_acc': None, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 45.312000000000005
+Novel classes cumulative accuracy: 33.6
+session: 0 test accuracy: 46.305
+session: 1 test accuracy: 33.6
+protos, radius torch.Size([64, 512]) 2.2582647976794297
+training session: [2]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.42841, 'base_acc': 0.45703, 'novel_acc': 0.2595, 'former_acc': 0.44695, 'cur_acc': 0.191, 'sess0_acc': 0.45703, 'sess1_acc': 0.328, 'sess2_acc': 0.191, 'sess3_acc': None, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 42.841
+Novel classes cumulative accuracy: 25.95
+session: 0 test accuracy: 45.702999999999996
+session: 1 test accuracy: 32.800000000000004
+session: 2 test accuracy: 19.1
+protos, radius torch.Size([69, 512]) 2.2582647976794297
+training session: [3]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.41358, 'base_acc': 0.44932, 'novel_acc': 0.273, 'former_acc': 0.42087, 'cur_acc': 0.313, 'sess0_acc': 0.44932, 'sess1_acc': 0.325, 'sess2_acc': 0.181, 'sess3_acc': 0.313, 'sess4_acc': None, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 41.358
+Novel classes cumulative accuracy: 27.3
+session: 0 test accuracy: 44.932
+session: 1 test accuracy: 32.5
+session: 2 test accuracy: 18.099999999999998
+session: 3 test accuracy: 31.3
+protos, radius torch.Size([74, 512]) 2.2582647976794297
+training session: [4]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.40918, 'base_acc': 0.44305, 'novel_acc': 0.30925, 'former_acc': 0.40649, 'cur_acc': 0.449, 'sess0_acc': 0.44305, 'sess1_acc': 0.314, 'sess2_acc': 0.167, 'sess3_acc': 0.307, 'sess4_acc': 0.449, 'sess5_acc': None, 'sess6_acc': None}
+Overall cumulative accuracy: 40.918
+Novel classes cumulative accuracy: 30.925000000000004
+session: 0 test accuracy: 44.305
+session: 1 test accuracy: 31.4
+session: 2 test accuracy: 16.7
+session: 3 test accuracy: 30.7
+session: 4 test accuracy: 44.9
+protos, radius torch.Size([79, 512]) 2.2582647976794297
+training session: [5]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.39702, 'base_acc': 0.43449, 'novel_acc': 0.3086, 'former_acc': 0.40076, 'cur_acc': 0.338, 'sess0_acc': 0.43449, 'sess1_acc': 0.306, 'sess2_acc': 0.166, 'sess3_acc': 0.29, 'sess4_acc': 0.443, 'sess5_acc': 0.338, 'sess6_acc': None}
+Overall cumulative accuracy: 39.702
+Novel classes cumulative accuracy: 30.86
+session: 0 test accuracy: 43.449
+session: 1 test accuracy: 30.599999999999998
+session: 2 test accuracy: 16.6
+session: 3 test accuracy: 28.999999999999996
+session: 4 test accuracy: 44.3
+session: 5 test accuracy: 33.800000000000004
+protos, radius torch.Size([84, 512]) 2.2582647976794297
+training session: [6]
+module.fc.mu
+module.fc.sigma
+Not updating new class with class means
+Started fine tuning
+{'all_acc': 0.38152, 'base_acc': 0.42712, 'novel_acc': 0.29183, 'former_acc': 0.39071, 'cur_acc': 0.227, 'sess0_acc': 0.42712, 'sess1_acc': 0.304, 'sess2_acc': 0.163, 'sess3_acc': 0.287, 'sess4_acc': 0.437, 'sess5_acc': 0.333, 'sess6_acc': 0.227}
+Overall cumulative accuracy: 38.152
+Novel classes cumulative accuracy: 29.182999999999996
+session: 0 test accuracy: 42.712
+session: 1 test accuracy: 30.4
+session: 2 test accuracy: 16.3
+session: 3 test accuracy: 28.7
+session: 4 test accuracy: 43.7
+session: 5 test accuracy: 33.300000000000004
+session: 6 test accuracy: 22.7
+protos, radius torch.Size([89, 512]) 2.2582647976794297
+
+
+
+Final result:
+save output at  checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00/output.xlsx
+
+reslut on FMC, method pitsc                    
+checkpoint/FMC/pitsc/ft_cos-avg_cos-data_init-start_0/seed28pit_sc_pmp0.0pma0.8pcp0.4pca1.0idty0.6pit_mixup_alpha0.6lamda_proto0.0way5shot5_debug/Epo_20-Lr_0.0100-Step_40-Gam_0.50-Bs_128-Mom_0.90-T_16.00                    
+****************************************Pretty Output********************************************                    
+          0         1         2         3         4         5         6
+0  0.475016  0.284800  0.175700  0.328500  0.403200  0.341700  0.251400
+1  0.475016  0.463093  0.455989  0.449169  0.443805  0.436127  0.429646
+2       NaN  0.284800  0.226100  0.256534  0.286000  0.290000  0.280417
+3  0.475016  0.449163  0.422674  0.410121  0.403853  0.392636  0.379343                    
+===> Comprehensive Performance Index(CPI) v2: 0.5875646305626198
+===> PD: 0.09567299999999995                    
+===> Memory Strock Ratio(MSR) Overall: 0.9044874277919062
+===> Amnesia Rate(AR): 0.09551257220809385                    
+===> Acc Average: 
+acc_cur_aver      0.297550
+acc_base_aver     0.450406
+acc_novel_aver    0.270642
+acc_both_aver     0.418972
+dtype: float64                    
+***********************************************************************************************
